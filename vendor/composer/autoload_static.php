@@ -55,6 +55,7 @@ class ComposerStaticInit09e9d0f9209c851300800dec47f65a83
 
     public static $classMap = array (
         'Acme\\Foo' => __DIR__ . '/../..' . '/src/Foo.php',
+        'Acme\\Time' => __DIR__ . '/../..' . '/src/Time.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
