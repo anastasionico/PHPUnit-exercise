@@ -28,6 +28,9 @@ Add mockery
 	(the expectation check if and how many times a selected method has been called within a test method)
 	Mockery need to be told to check that the method was called as expected and to trigger this count we need to close the mockery by using the the method tearDown
 
+Add Mockery on the StripeBilling class
+	If a class has an depencency of another class or a model what we need to do in order to be able to mock it is to insert the depencency into the construct, this allows Mochery to allow the required class in the test and pass it as parameter of the class we are testing
+
 
 
 
