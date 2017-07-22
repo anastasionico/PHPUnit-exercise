@@ -9,9 +9,8 @@ function time(){
 class TimeTest extends \PHPUnit\Framework\TestCase
 {
 	public function test_gets_the_time(){
-		
 		$result = (new Time)->getTime();
-		$this->assertEquals($result, 'PHP function time overridden');
+		assertEquals($result, 'PHP function time overridden');
 
 	}
 }
