@@ -662,6 +662,7 @@ class ComposerStaticInit09e9d0f9209c851300800dec47f65a83
         'TheSeer\\Tokenizer\\TokenCollectionException' => __DIR__ . '/..' . '/theseer/tokenizer/src/TokenCollectionException.php',
         'TheSeer\\Tokenizer\\Tokenizer' => __DIR__ . '/..' . '/theseer/tokenizer/src/Tokenizer.php',
         'TheSeer\\Tokenizer\\XMLSerializer' => __DIR__ . '/..' . '/theseer/tokenizer/src/XMLSerializer.php',
+        'null\\MockedClass' => __DIR__ . '/../..' . '/src/MockedClass.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -1,23 +1,33 @@
 WRITE A TEST (WALKTHROUGH)
 
-initiate the project
+Initiate the project
 	Create a folder
 	Initiate it in git
 	Create src/ and tests/ directories
 	Touch composer.json
 
-initiate composer
+Initiate composer
 	Define the autoload inside composer.json 
 	Run composer install in the CLI
 	Create a class inside the src directory (give a namespace to the class)
 	Run composer dump-autoloar in the CLI
 
-install and initiate phpunit
+Install and initiate phpunit
 	Run composer require phpunit/phpunit
 	Create the phpunit.xml file and indicate the directory where the test will be written
 	Create the tests/bootstrap.php file and require autoload and Function.php
 
 
-write a test
+Write a test
 	Write a test file inside the tests folder (or whatever indicated inside phpunit.xml) give it the same name of the class to test nameclassTest.php (WARNING pay attention if the address of the class to extend is correct)
+
+Add mockery
+	add mockery/mockery to the composer.json and update composer
+	create a new test and mock a class
+	withing the test class create a method that add and expectations on a method within the class
+	(the expectation check if and how many times a selected method has been called within a test method)
+	Mockery need to be told to check that the method was called as expected and to trigger this count we need to close the mockery by using the the method tearDown
+
+
+
 
