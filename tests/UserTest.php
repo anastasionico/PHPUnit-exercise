@@ -3,21 +3,24 @@ use Codecourse\User;
 
 class UserTest extends \PHPUnit\Framework\TestCase
 {
-	public function testThatWeCanGetTheFistName()
+	/** @test */
+	public function that_we_can_get_the_fist_name()
 	{
 		$user = new User;
 		$user->setName('Nico');
 		assertEquals($user->getName(), 'Nico');
 	}
 
-	public function testThatWeCanGetTheSurname()
+	/** @test */
+	public function that_we_can_get_the_surname()
 	{
 		$user = new User;
 		$user->setSurname('Anastasio');
 		assertEquals($user->surname, "Anastasio");
 	}
 
-	public function testFullName()
+	/** @test */
+	public function full_name()
 	{
 		$user = new User();
 		$user->setName('Nico');
@@ -26,7 +29,8 @@ class UserTest extends \PHPUnit\Framework\TestCase
 		assertEquals($user->getFullName(), "Anastasio Nico");
 	}
 
-	public function testNameAndSurnameAreTrimmed()
+	/** @test */
+	public function name_and_surname_are_trimmed()
 	{
 		$user = new User();
 		$user->setName('  Nico');
@@ -36,7 +40,8 @@ class UserTest extends \PHPUnit\Framework\TestCase
 		assertEquals($user->getSurname(), 'Anastasio');
 	}
 
-	public function testEmailAddressCanBeSet()
+	/** @test */
+	public function email_address_can_be_set()
 	{
 		$email = "nico@anastasionico.uk";
 		$user = new User();
@@ -44,7 +49,8 @@ class UserTest extends \PHPUnit\Framework\TestCase
 		assertEquals($user->getEmail(), $email);
 	}
 
-	public function testEmailValueContainCorrectValue()
+	/** @test */
+	public function email_variable_contain_correct_value()
 	{
 		$user = new User();
 		$user->setName('Nico');
@@ -63,6 +69,5 @@ class UserTest extends \PHPUnit\Framework\TestCase
 		// 	'fullname' => "nico Anastasio",
 		// 	'email' => 'nico@anastasionico.uk'
 		// ]
-
 	}
 }
