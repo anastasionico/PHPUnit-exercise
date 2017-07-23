@@ -31,6 +31,9 @@ Add mockery
 Add Mockery on the StripeBilling class
 	If a class has an depencency of another class or a model what we need to do in order to be able to mock it is to insert the depencency into the construct, this allows Mochery to allow the required class in the test and pass it as parameter of the class we are testing
 
-
+Fixing the antipattern
+	Becouse the controlle does not have to care who is responsible to provide the billing functionality, eventually I have created a BillingInterface.
+	Having injected the interface instead of the billing class allows to make easier in case i need to change from stripe to others.
+			__________________________________________					__________________________________________	
 
 

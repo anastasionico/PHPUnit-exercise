@@ -61,10 +61,12 @@ class ComposerStaticInit09e9d0f9209c851300800dec47f65a83
     );
 
     public static $classMap = array (
+        'Acme\\Billing\\BillingInterface' => __DIR__ . '/../..' . '/src/BillingInterface.php',
         'Acme\\Billing\\StripeBilling' => __DIR__ . '/../..' . '/src/StripeBilling.php',
         'Acme\\Foo' => __DIR__ . '/../..' . '/src/Foo.php',
         'Acme\\PurchasesController' => __DIR__ . '/../..' . '/src/PurchasesController.php',
         'Acme\\Time' => __DIR__ . '/../..' . '/src/Time.php',
+        'Codecourse\\User' => __DIR__ . '/../..' . '/src/User.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
