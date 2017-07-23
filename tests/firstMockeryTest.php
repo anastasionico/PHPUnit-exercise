@@ -2,6 +2,7 @@
 
 class FirstMockeryTest extends PHPUnit\Framework\TestCase
 {
+	// Once the test method has finished running, whether it succeeded or failed, the template method called tearDown() is invoked. tearDown() is where you clean up the objects against which you tested.
 	public function TearDown()
 	{
 		Mockery::close();
