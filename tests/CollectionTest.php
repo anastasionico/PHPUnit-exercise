@@ -67,7 +67,8 @@ class CollectionTest extends PHPUnit\Framework\TestCase
 	}
 
 	/**
-	* @test
+	*	in this test we merge the items in the collections and check the final number of items
+	* 	@test
 	*/
 	public function collection_can_be_merged_with_another_collection()
 	{
@@ -82,7 +83,8 @@ class CollectionTest extends PHPUnit\Framework\TestCase
 	}
 
 	/**
-	* @test
+	*	here we test the $collection->add() method
+	* 	@test
 	*/
 	public function can_add_to_existing_collection()
 	{
@@ -92,4 +94,37 @@ class CollectionTest extends PHPUnit\Framework\TestCase
 		assertCount(6, $collection->get());
 		assertEquals(6, $collection->count());
 	}
+
+	/**
+	*	in here retrieve the items passed into a jason format
+	* 	@test
+	*/
+	public function return_json_encoded_items()
+	{
+		$collection = new Collection([
+			['username' => 'Nico'],
+			['username' => 'Anastasio'],
+		]);
+
+		assertInternalType('string', $collection->toJson());
+		assertEquals('[{"username":"Nico"},{"username":"Anastasio"}]', $collection->toJson());
+	}
+
+	/**
+	*	*	in here retrieve the items passed into a jason format using the JasonSerialize interface to the Collection Class
+	* @test
+	*/
+	public function return_json_encoded_jsonformat()
+	{
+		$collection = new Collection([
+			['username' => 'Nico'],
+			['username' => 'Anastasio'],
+		]);
+
+		$encoded = json_encode($collection);
+
+		assertInternalType('string', $encoded);
+		assertEquals('[{"username":"Nico"},{"username":"Anastasio"}]', $encoded);
+	}
+
 }
