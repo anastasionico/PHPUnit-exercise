@@ -12,6 +12,7 @@ return array(
     'Acme\\PurchasesController' => $baseDir . '/src/PurchasesController.php',
     'Acme\\Time' => $baseDir . '/src/Time.php',
     'Calculator\\Addition' => $baseDir . '/src/calculator/Addition.php',
+    'Calculator\\Division' => $baseDir . '/src/calculator/Division.php',
     'Calculator\\Exception\\NoOperandsException' => $baseDir . '/src/exception/NoOperandsException.php',
     'Calculator\\OperationInterface' => $baseDir . '/src/calculator/OperationInterface.php',
     'Codecourse\\Collection' => $baseDir . '/src/Collection.php',
