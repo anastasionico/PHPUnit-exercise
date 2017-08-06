@@ -69,6 +69,7 @@ class ComposerStaticInit09e9d0f9209c851300800dec47f65a83
         'Calculator\\Addition' => __DIR__ . '/../..' . '/src/calculator/Addition.php',
         'Calculator\\Division' => __DIR__ . '/../..' . '/src/calculator/Division.php',
         'Calculator\\Exception\\NoOperandsException' => __DIR__ . '/../..' . '/src/exception/NoOperandsException.php',
+        'Calculator\\OperationAbstract' => __DIR__ . '/../..' . '/src/calculator/OperationAbstract.php',
         'Calculator\\OperationInterface' => __DIR__ . '/../..' . '/src/calculator/OperationInterface.php',
         'Codecourse\\Collection' => __DIR__ . '/../..' . '/src/Collection.php',
         'Codecourse\\User' => __DIR__ . '/../..' . '/src/User.php',

@@ -2,14 +2,9 @@
 namespace Calculator;
 
 use Calculator\Exception\NoOperandsException;
+use Calculator\OperationAbstract;
 
-class Addition implements OperationInterface{
-	public $operands;
-	public function setOperands(array $operands)
-	{
-		$this->operands = $operands;
-	}
-
+class Addition extends OperationAbstract implements OperationInterface{
 	public function calculate()
 	{
 		if(count($this->operands) === 0){

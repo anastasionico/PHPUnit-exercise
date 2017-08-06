@@ -14,6 +14,7 @@ return array(
     'Calculator\\Addition' => $baseDir . '/src/calculator/Addition.php',
     'Calculator\\Division' => $baseDir . '/src/calculator/Division.php',
     'Calculator\\Exception\\NoOperandsException' => $baseDir . '/src/exception/NoOperandsException.php',
+    'Calculator\\OperationAbstract' => $baseDir . '/src/calculator/OperationAbstract.php',
     'Calculator\\OperationInterface' => $baseDir . '/src/calculator/OperationInterface.php',
     'Codecourse\\Collection' => $baseDir . '/src/Collection.php',
     'Codecourse\\User' => $baseDir . '/src/User.php',
