@@ -48,7 +48,8 @@ class CollectionTest extends PHPUnit\Framework\TestCase
 	}
 
 	/**
-	*	in this test we loop on a collection we have created and thanks to the getIterator method we get and count the items
+	*	In this test we loop through the items on in a collection, we can do so thanks to the IteratorAggregate predefinite php class.
+	*	the test check that the items in the collection are the same number of the item we pass when we instanciate the class and using the assertIstanceOf we verify that the Collection class implements the ArrayIterator class
 	* 	@test
 	**/
 	public function collection_can_be_iterated()
@@ -67,7 +68,7 @@ class CollectionTest extends PHPUnit\Framework\TestCase
 	}
 
 	/**
-	*	in this test we merge the items in the collections and check the final number of items
+	*	The purpose of this test is to merge all the items of the two classes into the fist Collection to do so we use the add function that call for the add method (inside the add method we merge the array of the item of collection1 with the array of collection2 that has been injected). then we count that the total amount of items is the same of the items we have passed when we instanciate the two Collection
 	* 	@test
 	*/
 	public function collection_can_be_merged_with_another_collection()
@@ -83,7 +84,7 @@ class CollectionTest extends PHPUnit\Framework\TestCase
 	}
 
 	/**
-	*	here we test the $collection->add() method
+	*	here we test the $collection->add() method by simply merging the items passed when we instanciate the collection class summed an array of other items
 	* 	@test
 	*/
 	public function can_add_to_existing_collection()
@@ -96,22 +97,22 @@ class CollectionTest extends PHPUnit\Framework\TestCase
 	}
 
 	/**
-	*	in here retrieve the items passed into a jason format
+	*	In the following test we inject an associative array to the collection and testing the toJson method we check: 1 using the assertInternalType that the oucome is a string, 2 the result of the toJson method is equal to the one we want 
 	* 	@test
 	*/
 	public function return_json_encoded_items()
 	{
 		$collection = new Collection([
 			['username' => 'Nico'],
-			['username' => 'Anastasio'],
+			['username' => 'Tom'],
 		]);
 
-		assertInternalType('string', $collection->toJson());
-		assertEquals('[{"username":"Nico"},{"username":"Anastasio"}]', $collection->toJson());
+		assertInternalType('string', $collection->toJson()); // assertInternalType check that the method (2' par) return the type we asked for on the first par
+		assertEquals('[{"username":"Nico"},{"username":"Tom"}]', $collection->toJson());
 	}
 
 	/**
-	*	*	in here retrieve the items passed into a jason format using the JasonSerialize interface to the Collection Class
+	*	The following test is very similar to return_json_encoded_items() but instead of calling the json_encode using the toJson() method we let do this by implementing the php class JsonSerializable and calling his abstract method jsonSerialize
 	* @test
 	*/
 	public function return_json_encoded_jsonformat()

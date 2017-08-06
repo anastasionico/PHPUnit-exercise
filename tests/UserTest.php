@@ -1,7 +1,7 @@
 <?php
 use Codecourse\User;
 
-class UserTest extends \PHPUnit\Framework\TestCase
+class UserTest extends PHPUnit\Framework\TestCase
 {
 	protected $user;
 
@@ -10,6 +10,8 @@ class UserTest extends \PHPUnit\Framework\TestCase
 	{
 		$this->user = new User;	
 	}
+
+	
 	/** @test */
 	public function that_we_can_get_the_fist_name()
 	{
