@@ -5,6 +5,7 @@ use Calculator\Exception\NoOperandsException;
 use Calculator\OperationAbstract;
 
 class Addition extends OperationAbstract implements OperationInterface{
+	
 	public function calculate()
 	{
 		if(count($this->operands) === 0){

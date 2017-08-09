@@ -67,6 +67,7 @@ class ComposerStaticInit09e9d0f9209c851300800dec47f65a83
         'Acme\\PurchasesController' => __DIR__ . '/../..' . '/src/PurchasesController.php',
         'Acme\\Time' => __DIR__ . '/../..' . '/src/Time.php',
         'Calculator\\Addition' => __DIR__ . '/../..' . '/src/calculator/Addition.php',
+        'Calculator\\Calculator' => __DIR__ . '/../..' . '/src/calculator/Calculator.php',
         'Calculator\\Division' => __DIR__ . '/../..' . '/src/calculator/Division.php',
         'Calculator\\Exception\\NoOperandsException' => __DIR__ . '/../..' . '/src/exception/NoOperandsException.php',
         'Calculator\\OperationAbstract' => __DIR__ . '/../..' . '/src/calculator/OperationAbstract.php',
